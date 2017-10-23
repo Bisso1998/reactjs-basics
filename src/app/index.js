@@ -7,27 +7,29 @@ class App extends React.Component {
   render() {
     var user = {
       name: "Sammy",
-      age: 24
+      age: 24,
+      hobbies: ["Music", "Sports","Dance"]
     };
     let string = <p>BissoBoss</p>;
     return (
-      <div className="conatiner" >
+      <div className= "conatiner" >
         <div className = "row">
           <div className = "col-xs-4">
-            <Home name={"bobby"} age={27} user={user}/>
             <Home/>
             <Home/>
+              <Header name={"bobby"} age={27} user={user}>
+                <p> This is a paragraph</p>
+              </Header>
+              <Header name={"Bisso"} age={39} user={user}>
+              </Header>
           </div>
         </div>
         <div className = "row">
           <div className = "col-xs-4">
-            <Header/> {string} from {5+4} pm
           </div>
         </div>
       </div>
     );
   }
 }
-
-
 render(<App/>,window.document.getElementById('app'));
