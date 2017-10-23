@@ -15,7 +15,7 @@ class App extends React.Component {
       <div className= "conatiner" >
         <div className = "row">
           <div className = "col-xs-4">
-            <Home/>
+            <Home homeLink="HOME"/>
               <Header name={"bobby"} initialAge={27} user={user} initialSalary={50000}>
               </Header>
           </div>

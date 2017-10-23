@@ -8,6 +8,11 @@ export class Header extends React.Component{
       status: 0,
       salary: props.initialSalary
     };
+  // setTimeout(() => {
+  //   this.setState({
+  //     status: 1
+  //   };
+  // },3000));
   }
   onMakeOlder()
   {
