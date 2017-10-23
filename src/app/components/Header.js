@@ -1,20 +1,29 @@
 import React from "react";
 export class Header extends React.Component{
+  constructor(props)
+  {
+    super();
+    this.state = {
+      age: props.initialAge,
+      status: 0,
+      salary: props.initialSalary
+    };
+  }
+  onMakeOlder()
+  {
+    this.setState({
+      age: this.state.age + 3,
+      salary: this.state.salary - 1000
+    })
+  }
   render(){
-    console.log(this.props.age);
-    console.log(this.props.name);
-    console.log("For the user obj");
-    // console.log({this.props.user});
-    return(
-      <div >
-      <p> You are {this.props.age} Mr. {this.props.name} </p>
-      <p>At home....</p>
-      {this.props.user.name} is  {this.props.user.age} years old.
-      <h3>Hobbies</h3>
-      {this.props.user.hobbies.map((hobby,i) => <li key ={i}>{hobby}</li>)}
 
-      <hr/>
-      {this.props.children}
+    return(
+      <div>
+        <p> You are {this.state.age} Mr. {this.props.name} </p>
+        <p>Status: {this.state.status}</p>
+        <p>You salary is: {this.state.salary}</p>
+        <button onClick={() => this.onMakeOlder()} className="btn btn-primary">Make mme older and cut my salary</button>
       </div>
     );
   }
@@ -22,7 +31,7 @@ export class Header extends React.Component{
 
 Header.propTypes= {
   name: React.PropTypes.string,
-  age: React.PropTypes.number,
+  initialAge: React.PropTypes.number,
   user: React.PropTypes.object,
   children: React.PropTypes.element.isRequired
 }

@@ -16,11 +16,7 @@ class App extends React.Component {
         <div className = "row">
           <div className = "col-xs-4">
             <Home/>
-            <Home/>
-              <Header name={"bobby"} age={27} user={user}>
-                <p> This is a paragraph</p>
-              </Header>
-              <Header name={"Bisso"} age={39} user={user}>
+              <Header name={"bobby"} initialAge={27} user={user} initialSalary={50000}>
               </Header>
           </div>
         </div>
