@@ -14,6 +14,7 @@ export class Header extends React.Component{
   //   };
   // },3000));
   }
+
   onMakeOlder()
   {
     this.setState({
@@ -29,6 +30,7 @@ export class Header extends React.Component{
         <p>Status: {this.state.status}</p>
         <p>You salary is: {this.state.salary}</p>
         <button onClick={() => this.onMakeOlder()} className="btn btn-primary">Make mme older and cut my salary</button>
+        <button className = " btn btn-success" onClick={this.props.greet} >Greet </button>
       </div>
     );
   }
@@ -38,5 +40,6 @@ Header.propTypes= {
   name: React.PropTypes.string,
   initialAge: React.PropTypes.number,
   user: React.PropTypes.object,
-  children: React.PropTypes.element.isRequired
+  children: React.PropTypes.element.isRequired,
+  greet: React.PropTypes.func
 }
