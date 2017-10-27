@@ -66,7 +66,6 @@ class App extends React.Component {
           myName={"Rock"}
           myAge={100}
           myFriend = {myFriend}
-
         />
       <Footer name={"Boobs is love"} changeTitle={this.changeTitle.bind(this)} title = {this.state.title}/>
       </div>
